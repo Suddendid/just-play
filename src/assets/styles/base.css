@@ -1,0 +1,189 @@
+/*===============================================================*/
+/*========================== 基础样式 ============================*/
+/*===============================================================*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+abbr,
+address,
+cite,
+em,
+img,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-text-size-adjust: none;
+  word-break: break-all;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #3b384c;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/*==== 以上为阿里巴巴基础样式 ===*/
+
+
+
+/*一行省略*/
+.text-overflow {
+  /*文字超出省略号  */
+  overflow: hidden;
+  /*超出一行文字自动隐藏*/
+  text-overflow: ellipsis;
+  /*文字隐藏后添加省略号*/
+  white-space: nowrap;
+  /*强制不换行*/
+}
+
+/*两行省略*/
+.text-overflow-two {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+}
+
+input,
+textarea {
+  outline: none;
+  border: 0;
+  background: none;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #ededed !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent;
+  background-image: none;
+  transition: background-color 50000s ease-in-out 0s;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  /* width: 12px; */
+  width: 20px;
+  /*竖向滚动条的宽度*/
+  height: 20px;
+  /*横向滚动条的高度*/
+  background-color: #ffffff05;
+  border-radius: 10px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  /* border-radius: 10px; */
+  /* background-color: orange; */
+  background-color: #ffffff05;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  /* border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1); */
+  background-color: #ffffff30;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  /* background-color: yellow; */
+  /* background: rgba(255, 0, 0, 0.4); */
+}
+
+:not(.show-scrollbar)::-webkit-scrollbar {
+  /*移除所有滚动条*/
+  display: none;
+}

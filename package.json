@@ -1,0 +1,38 @@
+{
+  "name": "just-play",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:production": "vue-cli-service build",
+    "build:staging": "vue-cli-service build --mode staging",
+    "build:testing": "vue-cli-service build --mode testing",
+    "dev": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "ant-design-vue": "^1.7.8",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.10.7",
+    "echarts": "^5.1.1",
+    "exif-js": "^2.3.0",
+    "js-cookie": "^2.2.1",
+    "swiper": "^5.4.5",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0"
+  },
+  "devDependencies": {
+    "@turf/turf": "^6.5.0",
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "postcss-pxtorem": "^5.1.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
