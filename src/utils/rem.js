@@ -24,7 +24,7 @@ export const fontSize = (size) => {
   return (size / remRootValue) * getRemUnit();
 };
 
-// 设置root font-size
+// 设置root fonts-size
 export const setRootFontSize = () => {
   const clientWidth = document.documentElement.clientWidth;
   document.documentElement.style.fontSize = `${getRemUnit()}px`;

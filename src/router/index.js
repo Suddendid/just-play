@@ -2,27 +2,44 @@ import Vue from "vue";
 import Router from "vue-router";
 import Index from "@/views/Index.vue";
 import NotFound from "@/views/NotFound.vue";
+
 Vue.use(Router);
 
 export default new Router({
-  // mode: "history",
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: "/",
-      redirect: "/Index",
-    },
-    {
-      path: "*",
-      name: "notFound",
-      component: NotFound,
-    },
-    {
-      path: "/Index",
-      name: "Index",
-      component: Index,
-    },
-  ],
+    // mode: "history",
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: "/",
+            redirect: "/Index",
+        },
+        {
+            path: "/btn",
+            name: "btn",
+            component: () => {
+                return import("@/views/btn.vue")
+            },
+        },
+        {
+            path: "/",
+            redirect: "/Login",
+        },
+        {
+            path: "/Index",
+            name: "Index",
+            component: Index,
+        },
+        {
+            path: '/Login',
+            name: 'Login',
+            component: () => {
+                return import("@/views/Login.vue")
+            },
+            meta: {
+                title: "登录",
+            },
+        }
+    ],
 });
 /**
  * 重写路由的push方法
@@ -31,13 +48,13 @@ export default new Router({
  */
 const routerPush = Router.prototype.push;
 Router.prototype.push = function push(location) {
-  sessionStorage.setItem("k_route_opt", "push");
-  return routerPush.call(this, location).catch((error) => error);
+    sessionStorage.setItem("k_route_opt", "push");
+    return routerPush.call(this, location).catch((error) => error);
 };
 
 //重写路由的replace方法
 const routerReplace = Router.prototype.replace;
 Router.prototype.replace = function replace(location) {
-  sessionStorage.setItem("k_route_opt", "replace");
-  return routerReplace.call(this, location).catch((error) => error);
+    sessionStorage.setItem("k_route_opt", "replace");
+    return routerReplace.call(this, location).catch((error) => error);
 };
