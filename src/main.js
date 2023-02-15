@@ -9,6 +9,8 @@ import * as config from "@/config/index";
 
 Vue.prototype.$config = config;
 
+import './icons'
+
 import '@/assets/styles/font.css';
 
 import Antd from 'ant-design-vue';
@@ -23,6 +25,10 @@ Vue.use(api)
 import takeFile from "./components/takeFile";
 
 Vue.use(takeFile)
+
+import Directives from './views/components/directives'
+
+Vue.use(Directives)
 
 import * as rem from "@/utils/rem"
 

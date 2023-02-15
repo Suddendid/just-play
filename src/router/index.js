@@ -11,13 +11,19 @@ export default new Router({
     routes: [
         {
             path: "/",
-            redirect: "/Index",
+            redirect: "/VideoDemo",
         },
         {
-            path: "/btn",
-            name: "btn",
+            path: "/play-home",
+            name: "PlayHome",
             component: () => {
-                return import("@/views/btn.vue")
+                return import("@/views/PlayHome.vue")
+            },
+        }, {
+            path: "/VideoDemo",
+            name: "VideoDemo",
+            component: () => {
+                return import("@/views/VideoDemo.vue")
             },
         },
         {

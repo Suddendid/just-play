@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="content" @mousewheel="mousewheelAction">
-      <div class="top-nav">台北101大楼中华人</div>
+      <div class="top-nav">锦儿妹妹爱吃小零食</div>
       <div class="img-box">
         <div class="img-and-circle" ref="box1">
           <img class="img" src="@/assets/images/three-circle.png">
