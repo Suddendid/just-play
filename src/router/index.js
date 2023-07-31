@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Index from "@/views/Index.vue";
 import NotFound from "@/views/NotFound.vue";
 
+const Test = require("@/views/components/test.vue")
 Vue.use(Router);
 
 export default new Router({
@@ -19,7 +20,8 @@ export default new Router({
             component: () => {
                 return import("@/views/PlayHome.vue")
             },
-        }, {
+        },
+        {
             path: "/VideoDemo",
             name: "VideoDemo",
             component: () => {
@@ -44,6 +46,11 @@ export default new Router({
             meta: {
                 title: "登录",
             },
+        },
+        {
+            name: 'test',
+            path: '/test',
+            component: Test.default
         }
     ],
 });
